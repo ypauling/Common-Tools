@@ -43,7 +43,7 @@ def main(argv: list) -> None:
         if nub_sites.count(nub_sites[0]) != len(nub_sites):
             output[str(enzyme)] = nub_sites
 
-    print_fmt = '{:>20}'*(len(seq_ids)+1)
+    print_fmt = '{:>15}'*(len(seq_ids)+1)
     print(print_fmt.format('Enzyme Name', *seq_ids))
     for k, v in sorted(output.items()):
         print(print_fmt.format(k, *v))
